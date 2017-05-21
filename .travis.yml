@@ -42,9 +42,9 @@ install:
   - yarn install
 
 script:
+  - ng build --prod
   - ng test --watch false
   - ng e2e
-  - ng build --prod
 
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
